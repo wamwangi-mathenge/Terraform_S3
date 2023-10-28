@@ -12,7 +12,7 @@ provider "aws" {
 }
 
 resource "aws_s3_bucket" "adventure-tech" {
-  bucket = "AdventureTech-BM-bucket"
+  bucket = "adventuretech-brianmathenge-bucket"
 
   tags = {
     Name = "AdventureTech"
@@ -21,7 +21,7 @@ resource "aws_s3_bucket" "adventure-tech" {
 }
 
 resource "aws_s3_bucket" "nature-escape" {
-  bucket = "NatureEscape-BM-bucket"
+  bucket = "natureescape-brianmathenge-bucket"
 
   tags = {
     Name = "NatureEscape"
@@ -30,7 +30,7 @@ resource "aws_s3_bucket" "nature-escape" {
 }
 
 resource "aws_s3_bucket" "data-summit" {
-  bucket = "DataSummitCodeCarnival-BM-bucket"
+  bucket = "datasummitcodecarnival-brianmathenge-bucket"
 
   tags = {
     Name = "DataSummitCodeCarnival"
