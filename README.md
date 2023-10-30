@@ -1,21 +1,41 @@
-# Provisioning an S3 Bucket with Terraform
+# Terraform S3 Bucket Provisioning for Event Themes
 
+This Terraform project provisions S3 buckets for different event themes according to the provided guidelines.
 
-## SCENARIO
-You work for a company that hosts various types of events, from technology conferences to nature retreats. They want to improve their digital presence by creating separate S3 buckets for different event themes. Your task is to use Terraform to provision these S3 buckets.
+## Prerequisites
 
+1. [Terraform](https://www.terraform.io/downloads.html) installed on your local machine.
+2. AWS credentials properly configured. You can set them up using the AWS CLI or AWS IAM User access keys.
 
+## Configuration
 
-## Guidelines:
+### Terraform Variables
 
-1. Create a Terraform Configuration: Set up a Terraform configuration file named main.tf to define your resources.
-2. Bucket Naming Convention: Each bucket should follow the naming convention: <event_theme>-<your_initials>-bucket. For example, if the event theme is "AdventureTech" and your initials are "JS," the bucket name should be AdventureTech-JS-bucket.
-3. Event Themes: You are provided with a list of event themes. Choose at least three from the following list to create buckets for:
-    - AdventureTech
-    - NatureEscape
-    - DataSummit
-CodeCarnival
-4. Bucket Configuration: All buckets should have the following configuration:
-    - Region: Use the "us-west-2" region.
-    - Access Control: Set the ACL to "private."
-5. Output: Display the names of the created buckets as an output at the end of the Terraform run.
+You can customize the project by modifying the `main.tf` file. Here's how to configure the project:
+
+- **Bucket Naming Convention**: Each bucket follows the naming convention: `<event_theme>-<your_initials>-bucket`. You need to replace `your_initials` with your initials in the Terraform file.
+- **Event Themes**: You can choose at least three event themes from the provided list in the `main.tf` file.
+
+### Initialize the Project
+
+Run the following command to initialize the working directory:
+
+```shell
+terraform init
+```
+
+### Deploy S3 Buckets
+```
+terraform apply
+```
+
+## Destroy S3 Buckets
+```
+terraform destroy
+```
+
+## License
+This project is licensed under the MIT License
+
+## Author
+Brian Mathenge
